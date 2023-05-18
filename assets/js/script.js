@@ -1,4 +1,4 @@
-var searchEl = document.querySelector("#search");
+var searchEl = document.querySelector(".search");
 
 function handleSearchSubmit(event) {
   event.preventDefault();

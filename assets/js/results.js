@@ -1,6 +1,6 @@
 var resultTextEl = document.querySelector("#result-text");
 var resultContentEl = document.querySelector("#result-content");
-var searchEl = document.querySelector("#search");
+var searchEl = document.querySelector(".search");
 
 function searchParams() {
   var searchParamsArr = document.location.search.split("&");
