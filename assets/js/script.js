@@ -1,4 +1,4 @@
-var searchEl = document.querySelector(".search");
+var searchEl = document.querySelector("#search");
 
 function handleSearchSubmit(event) {
   event.preventDefault();
@@ -11,7 +11,8 @@ function handleSearchSubmit(event) {
     return;
   }
 
-  var queryString = "/search/?q=" + searchInput + "&format=" + formatInput;
+  var queryString =
+    "./search-results.html?q=" + searchInput + "&format=" + formatInput;
 
   location.assign(queryString);
 }

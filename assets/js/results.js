@@ -1,6 +1,6 @@
 var resultTextEl = document.querySelector("#result-text");
 var resultContentEl = document.querySelector("#result-content");
-var searchEl = document.querySelector(".search");
+var searchEl = document.querySelector("#search");
 
 function searchParams() {
   var searchParamsArr = document.location.search.split("&");
@@ -15,7 +15,7 @@ function results(resultObj) {
   console.log(resultObj);
 
   var resultCard = document.createElement("div");
-  resultCard.classList.add("card", "bg-lightGray", "mb-3", "p-3");
+  resultCard.classList.add("card", "bg-lightGray", "text-dark", "mb-3", "p-3");
 
   var resultBody = document.createElement("div");
   resultBody.classList.add("card-body");
@@ -80,7 +80,7 @@ function searchApi(query, format) {
           "<h3>No results found, try your search again.</h3>";
       } else {
         resultContentEl.textContent = "";
-        for (var i = 0; urlResponse.results.length; i++) {
+        for (var i = 0; i < urlResponse.results.length; i++) {
           results(urlResponse.results[i]);
         }
       }
