@@ -11,7 +11,7 @@ function handleSearchSubmit(event) {
     return;
   }
 
-  var queryString = "./search/?q=" + searchInput + "&format=" + formatInput;
+  var queryString = "/search/?q=" + searchInput + "&format=" + formatInput;
 
   location.assign(queryString);
 }
