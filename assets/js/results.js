@@ -25,18 +25,18 @@ function results(resultObj) {
   titleEl.textContent = resultObj.title;
 
   var bodyContent = document.createElement("p");
-  bodyContent.innerHTML = "<strong>Date:</strong>" + resultObj.date + "<br/>";
+  bodyContent.innerHTML = "<strong>Date: </strong>" + resultObj.date + "<br/>";
 
   if (resultObj.subject) {
     bodyContent.innerHTML +=
-      "<strong>Subjects:</strong>" + resultObj.subject.join(", ") + "<br/>";
+      "<strong>Subjects: </strong>" + resultObj.subject.join(", ") + "<br/>";
   } else {
     bodyContent.innerHTML += "<strong>Subjects:</strong> No subject found.";
   }
 
   if (resultObj.description) {
     bodyContent.innerHTML +=
-      "<strong>Description:</strong>" + resultObj.description[0];
+      "<strong>Description: </strong>" + resultObj.description[0];
   } else {
     bodyContent.innerHTML +=
       "<strong>Description:</strong> No description found.";
@@ -90,20 +90,20 @@ function searchApi(query, format) {
     });
 }
 
-function handleFormSubmit(event) {
-  event.preventDefault();
+// function handleFormSubmit(event) {
+//   event.preventDefault();
 
-  var searchInput = document.querySelector("#search").value;
-  var formatInput = document.querySelector("#format").value;
+//   var searchInput = document.querySelector("#search").value;
+//   var formatInput = document.querySelector("#format").value;
 
-  if (!searchInput) {
-    console.error("Please enter a search value.");
-    return;
-  }
+//   if (!searchInput) {
+//     console.error("Please enter a search value.");
+//     return;
+//   }
 
-  searchApi(searchInput, formatInput);
-}
+//   searchApi(searchInput, formatInput);
+// }
 
-searchEl.addEventListener("submit", handleFormSubmit);
+// searchEl.addEventListener("submit", handleFormSubmit);
 
 searchParams();

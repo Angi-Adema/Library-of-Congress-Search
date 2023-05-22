@@ -16,10 +16,9 @@
 
   <body>
     <div
-      class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh"
+      class="row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh"
     >
-      <div class="col-12 col-md-3 bg-light p-3">
-        <h1>Library of Congress Search Engine</h1>
+      <div class="col-md-3 bg-light p-3">
         <form class="search container-md">
           <fieldset>
             <h1 class="text-center">Library of Congress Search Engine</h1>
@@ -52,14 +51,16 @@
             <a
               href="./index.html"
               class="back btn btn-block btn-danger container-md"
-              >&larr; Go back.</a
+              >Go Back</a
             >
           </fieldset>
         </form>
-        <div class="col-12 col-md-9 p-3 text-light">
-          <h2>Showing results for <span id="result-text"></span></h2>
-          <div id="result-content"></div>
-        </div>
+      </div>
+      <div class="col-md-9 p-3 text-light">
+        <h2 class="bg-dark">
+          Showing results for <span id="result-text"></span>
+        </h2>
+        <div id="result-content"></div>
       </div>
     </div>
     <script
