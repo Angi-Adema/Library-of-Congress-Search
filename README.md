@@ -1,5 +1,7 @@
 # Module 06 Mini-Project: Library of Congress Search Tool
 
+[Deployed Site](https://angi-adema.github.io/Library-of-Congress-Search/)
+
 ![Library of Congress Search Tool Screenshot](./assets/images/libraryOfCongressSS.jpg)
 
 In this activity, you will work with a group to build an application that searches and displays results from the Library of Congress API.
