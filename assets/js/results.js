@@ -1,5 +1,5 @@
-var resultTextEl = document.querySelector("#result-text");
-var resultContentEl = document.querySelector("#result-content");
+var resultTextEl = document.querySelector("#title-text");
+var resultContentEl = document.querySelector("#search-content");
 var searchEl = document.querySelector(".search");
 
 function searchParams() {
@@ -25,13 +25,21 @@ function results(resultObj) {
   titleEl.textContent = resultObj.title;
 
   var bodyContent = document.createElement("p");
-  bodyContent.innerHTML = "<strong>Date: </strong>" + resultObj.date + "<br/>";
+
+  if (resultObj.date) {
+    bodyContent.innerHTML +=
+      "<strong>Date: </strong>" + resultObj.date + "<br/>";
+  } else {
+    bodyContent.innerHTML +=
+      "<strong>Date: </strong> No date found. " + "<br/>";
+  }
 
   if (resultObj.subject) {
     bodyContent.innerHTML +=
       "<strong>Subjects: </strong>" + resultObj.subject.join(", ") + "<br/>";
   } else {
-    bodyContent.innerHTML += "<strong>Subjects:</strong> No subject found.";
+    bodyContent.innerHTML +=
+      "<strong>Subjects: </strong> No subject found. " + "<br/>";
   }
 
   if (resultObj.description) {
@@ -39,7 +47,7 @@ function results(resultObj) {
       "<strong>Description: </strong>" + resultObj.description[0];
   } else {
     bodyContent.innerHTML +=
-      "<strong>Description:</strong> No description found.";
+      "<strong>Description:</strong> No description found. ";
   }
 
   var moreButtonEl = document.createElement("a");
